@@ -1,0 +1,55 @@
+﻿<Window x:Class="InfoVault.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfoVault"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="810" Width="1440"
+        WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="CanMinimize"
+        Icon="Images/IMG_1757_Original.ico">
+
+    <Border CornerRadius="13" Background="Black">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <!--// TITLE BAR \\-->
+            <Border Background="Transparent"
+                    Grid.ColumnSpan="100" MouseDown="DragWindow"
+            >
+                <!--// Window Control Buttons \\-->
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,0,10,0">
+                    <!--// Minimize Button \\-->
+                    <Button Style="{StaticResource WindowControlButtonTheme}"
+                            FontWeight="Black" FontSize="15"
+                            VerticalContentAlignment="Top"
+                            Click="MinimizeWindow">
+                        <TextBlock Text="__" Padding="0,0,0,10"/>
+                    </Button>
+                    
+                    <!--// Close Button \\-->
+                    <Button Style="{StaticResource WindowControlButtonTheme}"
+                            Content="🗙"
+                            Click="CloseWindow"
+                    />
+                    
+                </StackPanel>
+            </Border>
+            
+            <!--make more later-->
+            
+        </Grid>
+    </Border>
+    
+</Window>
